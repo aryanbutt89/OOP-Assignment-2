@@ -1,6 +1,5 @@
 #pragma once
 #include"MyForm.h"
-#include "Time_Table.h"
 #include"Student.h"
 #include"Teacher.h"
 #include"Room.h"
@@ -180,10 +179,6 @@ namespace Project35 {
 	}
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
-	Time_Table^ Time = gcnew Time_Table();
-	Time->ShowDialog();
-}
 private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	Student^ Std = gcnew Student();
 	Std->ShowDialog();
