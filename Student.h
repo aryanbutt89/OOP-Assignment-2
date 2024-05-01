@@ -1,121 +1,190 @@
-﻿#pragma once
+#pragma once
 
 namespace Project35 {
 
-	using namespace System;
-	using namespace System::ComponentModel;
-	using namespace System::Collections;
-	using namespace System::Windows::Forms;
-	using namespace System::Data;
-	using namespace System::Drawing;
+    using namespace System;
+    using namespace System::ComponentModel;
+    using namespace System::Collections;
+    using namespace System::Windows::Forms;
+    using namespace System::Data;
+    using namespace System::Drawing;
 
-	/// <summary>
-	/// Summary for Student
-	/// </summary>
-	public ref class Student : public System::Windows::Forms::Form
-	{
-	public:
-		Student(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
-		}
+ 
+    public ref class Student : public System::Windows::Forms::Form
+    {
+    public:
+        Student(void)
+        {
+            InitializeComponent();
+        
+        }
 
-	protected:
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		~Student()
-		{
-			if (components)
-			{
-				delete components;
-			}
-		}
-	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel1;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	protected:
+    protected:
+       
+        ~Student()
+        {
+            if (components)
+            {
+                delete components;
+            }
+        }
 
 
-	private:
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		System::ComponentModel::Container ^components;
+    private: System::Windows::Forms::TextBox^ textBox1;
+
+    private: System::Windows::Forms::Label^ label1;
+    private: System::Windows::Forms::DataGridView^ dataGridView1;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
+    private: System::Windows::Forms::Button^ button1;
+    private: System::Windows::Forms::Label^ label2;
+    private: System::Windows::Forms::TextBox^ textBox2;
+    private: System::Windows::Forms::Button^ refreshButton; 
+
+
+    protected:
+
+
+    private:
+     
+        System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		void InitializeComponent(void)
-		{
-			this->tableLayoutPanel1 = (gcnew System::Windows::Forms::TableLayoutPanel());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->SuspendLayout();
-			// 
-			// tableLayoutPanel1
-			// 
-			this->tableLayoutPanel1->ColumnCount = 2;
-			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				50)));
-			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
-				50)));
-			this->tableLayoutPanel1->Location = System::Drawing::Point(257, 31);
-			this->tableLayoutPanel1->Name = L"tableLayoutPanel1";
-			this->tableLayoutPanel1->RowCount = 5;
-			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 46.26866F)));
-			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 53.73134F)));
-			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 34)));
-			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 31)));
-			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 28)));
-			this->tableLayoutPanel1->Size = System::Drawing::Size(222, 158);
-			this->tableLayoutPanel1->TabIndex = 1;
-			// 
-			// button1
-			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(80, 226);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(152, 23);
-			this->button1->TabIndex = 2;
-			this->button1->Text = L"Add Student";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &Student::button1_Click);
-			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(257, 280);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(222, 20);
-			this->textBox1->TabIndex = 3;
-			// 
-			// Student
-			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(851, 472);
-			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->button1);
-			this->Controls->Add(this->tableLayoutPanel1);
-			this->Name = L"Student";
-			this->Text = L"Student";
-			this->Load += gcnew System::EventHandler(this, &Student::Student_Load);
-			this->ResumeLayout(false);
-			this->PerformLayout();
+       
+        void InitializeComponent(void)
+        {
+            this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+            this->label1 = (gcnew System::Windows::Forms::Label());
+            this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+            this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->button1 = (gcnew System::Windows::Forms::Button());
+            this->label2 = (gcnew System::Windows::Forms::Label());
+            this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+            this->refreshButton = (gcnew System::Windows::Forms::Button());
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+            this->SuspendLayout();
+            // 
+            // textBox1
+            // 
+            this->textBox1->Location = System::Drawing::Point(93, 44);
+            this->textBox1->Name = L"textBox1";
+            this->textBox1->Size = System::Drawing::Size(109, 20);
+            this->textBox1->TabIndex = 3;
+            this->textBox1->TextChanged += gcnew System::EventHandler(this, &Student::textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this->label1->AutoSize = true;
+            this->label1->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label1->Location = System::Drawing::Point(23, 46);
+            this->label1->Name = L"label1";
+            this->label1->Size = System::Drawing::Size(54, 18);
+            this->label1->TabIndex = 5;
+            this->label1->Text = L"Name";
+            // 
+            // dataGridView1
+            // 
+            this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+            this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
+                this->Column1,
+                    this->Column2
+            });
+            this->dataGridView1->Location = System::Drawing::Point(305, 12);
+            this->dataGridView1->Name = L"dataGridView1";
+            this->dataGridView1->Size = System::Drawing::Size(245, 210);
+            this->dataGridView1->TabIndex = 6;
+            this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Student::dataGridView1_CellContentClick_1);
+            // 
+            // Column1
+            // 
+            this->Column1->HeaderText = L"Name";
+            this->Column1->Name = L"Column1";
+            // 
+            // Column2
+            // 
+            this->Column2->HeaderText = L"Section";
+            this->Column2->Name = L"Column2";
+            // 
+            // button1
+            // 
+            this->button1->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->button1->Location = System::Drawing::Point(109, 149);
+            this->button1->Name = L"button1";
+            this->button1->Size = System::Drawing::Size(75, 23);
+            this->button1->TabIndex = 7;
+            this->button1->Text = L"Add";
+            this->button1->UseVisualStyleBackColor = true;
+            this->button1->Click += gcnew System::EventHandler(this, &Student::button1_Click);
+            // 
+            // label2
+            // 
+            this->label2->AutoSize = true;
+            this->label2->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label2->Location = System::Drawing::Point(15, 95);
+            this->label2->Name = L"label2";
+            this->label2->Size = System::Drawing::Size(69, 18);
+            this->label2->TabIndex = 8;
+            this->label2->Text = L"Section";
+            // 
+            // textBox2
+            // 
+            this->textBox2->Location = System::Drawing::Point(93, 95);
+            this->textBox2->Name = L"textBox2";
+            this->textBox2->Size = System::Drawing::Size(109, 20);
+            this->textBox2->TabIndex = 9;
+            this->textBox2->TextChanged += gcnew System::EventHandler(this, &Student::textBox2_TextChanged);
+            // 
+            // refreshButton
+            // 
+            this->refreshButton->Font = (gcnew System::Drawing::Font(L"Arial Rounded MT Bold", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->refreshButton->Location = System::Drawing::Point(100, 190);
+            this->refreshButton->Name = L"refreshButton";
+            this->refreshButton->Size = System::Drawing::Size(93, 23);
+            this->refreshButton->TabIndex = 10;
+            this->refreshButton->Text = L"Refresh";
+            this->refreshButton->UseVisualStyleBackColor = true;
+            this->refreshButton->Click += gcnew System::EventHandler(this, &Student::refreshButton_Click);
+            // 
+            // Student
+            // 
+            this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+            this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+            this->ClientSize = System::Drawing::Size(851, 472);
+            this->Controls->Add(this->refreshButton);
+            this->Controls->Add(this->textBox2);
+            this->Controls->Add(this->label2);
+            this->Controls->Add(this->button1);
+            this->Controls->Add(this->dataGridView1);
+            this->Controls->Add(this->label1);
+            this->Controls->Add(this->textBox1);
+            this->Name = L"Student";
+            this->Text = L"Student";
+            this->Load += gcnew System::EventHandler(this, &Student::Student_Load);
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+            this->ResumeLayout(false);
+            this->PerformLayout();
 
-		}
+        }
 #pragma endregion
-	private: System::Void Student_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		Student^ Std = gcnew Student();
-		Std->ShowDialog();
-	}
-	};
+    private: System::Void Student_Load(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void dataGridView1_CellContentClick_1(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+    }
+    private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+        dataGridView1->Rows->Add(textBox1->Text, textBox2->Text);
+    };
+    private: System::Void refreshButton_Click(System::Object^ sender, System::EventArgs^ e) {
+        textBox1->Clear();
+        textBox2->Clear();
+    };
+    };
 }
