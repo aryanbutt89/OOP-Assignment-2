@@ -47,7 +47,7 @@ namespace Project35 {
 
 
 	private: System::Windows::Forms::PictureBox^ pictureBox1;
-	private: System::Windows::Forms::Button^ button1;
+
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
@@ -78,7 +78,6 @@ namespace Project35 {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
@@ -93,10 +92,10 @@ namespace Project35 {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Lucida Sans Unicode", 15.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(197, 130);
+			this->textBox1->Location = System::Drawing::Point(201, 154);
 			this->textBox1->Margin = System::Windows::Forms::Padding(5, 4, 5, 4);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(391, 40);
+			this->textBox1->Size = System::Drawing::Size(396, 40);
 			this->textBox1->TabIndex = 0;
 			this->textBox1->Text = L"Time_Table Management System";
 			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
@@ -105,26 +104,16 @@ namespace Project35 {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(296, 3);
+			this->pictureBox1->Location = System::Drawing::Point(293, 3);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(174, 120);
+			this->pictureBox1->Size = System::Drawing::Size(174, 132);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 8;
 			this->pictureBox1->TabStop = false;
 			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(281, 195);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(231, 35);
-			this->button1->TabIndex = 9;
-			this->button1->Text = L"View Time_Table";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_1);
-			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(281, 252);
+			this->button2->Location = System::Drawing::Point(281, 214);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(231, 31);
 			this->button2->TabIndex = 10;
@@ -134,7 +123,7 @@ namespace Project35 {
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(281, 307);
+			this->button3->Location = System::Drawing::Point(283, 267);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(231, 31);
 			this->button3->TabIndex = 11;
@@ -144,7 +133,7 @@ namespace Project35 {
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(281, 363);
+			this->button4->Location = System::Drawing::Point(283, 322);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(231, 30);
 			this->button4->TabIndex = 12;
@@ -154,7 +143,7 @@ namespace Project35 {
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(281, 419);
+			this->button5->Location = System::Drawing::Point(283, 373);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(231, 30);
 			this->button5->TabIndex = 13;
@@ -166,13 +155,12 @@ namespace Project35 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(10, 19);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ClientSize = System::Drawing::Size(758, 712);
+			this->BackColor = System::Drawing::SystemColors::ButtonShadow;
+			this->ClientSize = System::Drawing::Size(763, 456);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->textBox1);
 			this->Font = (gcnew System::Drawing::Font(L"Maiandra GD", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
